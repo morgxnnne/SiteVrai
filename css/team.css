@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    line-height: 1.5;
+    font-size: 1rem; /* 16px équivaut à 1rem */
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
+    font-family: 'Audiowide', sans-serif;
+}
+
+/* Styles pour l'en-tête */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem; /* 20px en rem */
+    background-color: #121212;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem; /* 10px en rem */
+}
+
+.logo img {
+    height: 3.125rem; /* 50px en rem */
+    width: auto;
+    max-width: 100%;
+}
+
+.logo span {
+    font-size: 1.25rem; /* 20px en rem */
+    font-weight: bold;
+    margin-left: 0.625rem; /* 10px en rem */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.875rem; /* 30px en rem */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #e94560;
+}
+
+  /* Style du menu déroulant (par défaut caché) */
+  .dropdown-content {
+    display: none;
+    position : absolute;
+    right: 0;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  .dropdown-content p {
+    margin: 5px 0;
+    color: #fff;
+  }
+  
+  .dropdown-content a {
+    color: #e94560; 
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Afficher le menu au survol du "Contact" */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropbtn:hover {
+    background-color: #444;
+  }
+  
+.back-to-top {
+    position: fixed;
+    bottom: 1.875rem; /* 30px en rem */
+    right: 1.875rem; /* 30px en rem */
+    background-color: #e94560;
+    color: #fff;
+    width: 3.125rem; /* 50px en rem */
+    height: 3.125rem; /* 50px en rem */
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem; /* 20px en rem */
+    line-height: 3.125rem; /* 50px en rem */
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+.back-to-top.show {
+    opacity: 1;
+}

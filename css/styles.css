@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    line-height: 1.5;
+    font-size: 1rem; /* 16px équivaut à 1rem */
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
+    font-family: 'Audiowide', sans-serif;
+}
+
+/* Styles pour l'en-tête */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem; /* 20px en rem */
+    background-color: #121212;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem; /* 10px en rem */
+}
+
+.logo img {
+    height: 3.125rem; /* 50px en rem */
+    width: auto;
+    max-width: 100%;
+}
+
+.logo span {
+    font-size: 1.25rem; /* 20px en rem */
+    font-weight: bold;
+    margin-left: 0.625rem; /* 10px en rem */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.875rem; /* 30px en rem */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #e94560;
+}
+  
+  /* Style du menu déroulant (par défaut caché) */
+  .dropdown-content {
+    display: none;
+    position : absolute;
+    right: 0;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 2;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  .dropdown-content p {
+    margin: 5px 0;
+    color: #fff;
+  }
+  
+  .dropdown-content a {
+    color: #e94560; 
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Afficher le menu au survol du "Contact" */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropbtn:hover {
+    background-color: #444;
+  }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.trapezoid {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e94560;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 1rem;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e94560;
+    color: #fff;
+    width: 50px; /* Largeur fixe pour assurer un cercle */
+    height: 50px; /* Hauteur égale à la largeur */
+    border-radius: 50%; /* Rend la forme circulaire */
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px; /* Aligne verticalement la flèche au centre */
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #555; /* Change la couleur de fond au survol */
+}
+
+.back-to-top.show {
+    opacity: 1; /* Montre la flèche quand on scrolle */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.hero-text h1 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 8vh;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    width: 75%;
+    margin-left: 5%;
+    margin-top: 5vh;
+    max-width: 50vw;
+}
+
+.hero-text .buttons {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    font-size: 3vh;
+}
+
+/* Intro Section */
+.intro-text {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #e94560;
+    color: #ffffff;
+    padding: 1.5vh 2vw;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s ease;
+    display: inline-block;
+    margin: 2vh 0;
+    width: auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.btn:hover {
+    background-color: #d42a4e;
+    transform: scale(1.05);
+}
+
+.btn.secondary {
+    background-color: #292929;
+}
+
+.btn.secondary:hover {
+    background-color: #3a3a3a;
+}
+
+/* Footer */
+.footer {
+    padding: 2vh 2vw;
+    text-align: center;
+    background-color: #121212;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.icon {
+    width: 4vh;
+    height: 4vh;
+    transition: transform 0.3s, filter 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Programme Intro Section */
+.programme-intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15vh 2vw 15vh;
+    background-color: #121212;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.intro-image {
+    flex: 0 0 30%;
+    padding-right: 5vw;
+}
+
+.intro-text {
+    color: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.intro-text p {
+    line-height: 1.5;
+    font-size: 2vh;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin-left: 5vw;
+}
+
+.intro-title {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 4vh;
+    color: #e94560;
+    margin-bottom: 5vh;
+    text-align: left;
+}
+
+.intro-description {
+    font-size: 1.8vh;
+    color: #ffffff;
+    margin-bottom: 3vh;
+    text-align: left;
+    max-width: 50%;
+    line-height: 1.8;
+}
+
+.separator {
+    height: 0.1vh;
+    background: linear-gradient(to right, #e94560, #ffffff);
+    background-color: #121212;
+    margin: 0 auto;
+    width: 80%;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Game Posters */
+.game-posters {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    padding: 10vh 2vw;
+    background-color: #121212;
+}
+
+.poster {
+    position: relative;
+    width: 20vw;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2vh 2vw;
+    background-color: #1a1a1d;
+    border-radius: 1rem;
+    box-shadow: 0 0.5vh 1.5vh rgba(233, 69, 96, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.game-description {
+    font-style: italic;
+    font-size: 2vh;
+    color: #ffffff;
+    margin-top: 2vh;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    margin-bottom: 1vh;
+    flex: 1;
+}
+
+.poster .btn {
+    display: block; 
+    width: 90%;
+    padding: 1vh 0; 
+    text-align: center;
+    font-size: 1.5rem; 
+}
+
+.poster:hover {
+    transform: translateY(-1vh);
+    box-shadow: 0 1.5vh 3vh rgba(233, 69, 96, 0.7);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo img {
+        height: 4vh;
+    }
+
+    .logo span {
+        font-size: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 4vh;
+        margin-bottom: 1vh;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .nav a {
+        font-size: 1.2rem;
+    }
+
+    .footer .icons {
+        flex-direction: column;
+        gap: 1vh;
+    }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+body {
+    font-family: 'Audiowide', sans-serif;
+}

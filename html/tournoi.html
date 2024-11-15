@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournoi E-Sport UPEC 2024 - Tournois</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css"> 
+    <link rel="stylesheet" href="../css/tournoi.css"> 
+</head>
+<body>
+    <!-- En-tête -->
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/upec_logo.png" alt="Logo UPEC" loading="lazy">
+            <span>ESPORT</span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="../html/index.html" aria-label="Page d'accueil">Accueil</a></li>
+                <li><a href="../html/tournoi.html" aria-label="Page du tournoi" class="active">Tournoi</a></li>
+                <li><a href="#" aria-label="Page d'inscription">Inscription</a></li>
+                <li><a href="../html/team.html" aria-label="Page des équipes">Équipes</a></li>
+                <li><a href="#" aria-label="Scores en direct">Scores en direct</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Contact</a>
+                    <div class="dropdown-content">
+                      <p><strong>Email:</strong> contact@votre-email.com</p>
+                      <p><strong>Twitch:</strong> <a href="https://www.twitch.tv/votre_twitch" target="_blank">Notre Twitch</a></p>
+                      <p><strong>Discord:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Rejoignez notre serveur</a></p>
+                    </div>
+                  </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section d'introduction générale -->
+    <main class="tournoi-main">
+        <video class="background-video" autoplay loop muted playsinline>
+            <source src="../assets/background2.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="tournoi-intro">
+            <h1>Les Tournois E-Sport UPEC 2024</h1>
+            <p>Bienvenue dans la section des tournois ! Découvrez les compétitions excitantes qui vous attendent sur les jeux les plus populaires.</p>
+            <p>Ces tournois sont ouverts à tous les étudiants de l'UPEC, alors inscrivez-vous et montrez vos compétences !</p>
+        </div>
+    </main>
+        <div class="tournoi-details">
+            <h2>Détails du tournoi</h2>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Date :</strong> 12 décembre 2024</p>
+            <p><i class="fas fa-clock"></i> <strong>Heure :</strong> De 18h à 23h</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Lieu :</strong> MILKLUB ESPORT, UPEC</p>
+            <p><strong>Adresse :</strong> 31 Bd de Sébastopol, 75001 Paris</p>
+            <p><strong>Inscriptions :</strong> Les inscriptions sont ouvertes jusqu'au 10 décembre 2024. Assurez-vous de compléter votre inscription avant la date limite !</p>
+        </div>
+
+        <a href="#" class="back-to-top">↑</a>
+
+        <div class="menu-logos">
+            <div class="logo-item" id="logo-lol">
+                <img src="../assets/logo_lol.png" alt="LOL Logo">
+            </div>
+            <div class="logo-item" id="logo-valorant">
+                <img src="../assets/logo_valo.png" alt="Valorant Logo">
+            </div>
+            <div class="logo-item" id="logo-rl">
+                <img src="../assets/logo_rl.png" alt="Rl Logo">
+            </div>
+        </div>
+        
+        <!-- Section League of Legends -->
+        <section id="lol-section" class="lol-tournament-section">
+            <!-- Overlay sombre qui couvre toute l'image de fond -->
+            <div class="overlay"></div>
+
+            <h1>LEAGUE OF LEGENDS</h1>
+            <p class="description">La faille de l'invocateur de l'UPEC !</p>
+            <p class="details">Formez votre équipe de cinq, choisissez vos champions, affinez vos stratégies et remportez la victoire !</p>
+
+            <!-- Conteneur des détails du tournoi -->
+            <div class="tournament-details-container">
+                <!-- Case Tournoi -->
+                <div class="tournament-rules">
+                    <h3>Tournoi :</h3>
+                    <hr class="separator">
+                    <p><i class="fas fa-sync-alt"></i> <strong> Tournoi en poules : </strong> Affrontez vos adversaires dans des matchs de poules et placez-vous parmi les meilleures équipes pour accéder aux finales !</p>
+                    <p><i class="fas fa-users"></i> <strong> 5vs5 : </strong> Formez des équipes de 5 !</p>
+                    <p><i class="fas fa-user-secret"></i> Venez avec vos identifiants déjà prêts.</p>
+                </div>
+                <!-- Case Équipes -->
+                <div class="team-status">
+                    <h3>Équipes inscrites 0/4</h3>
+                    <hr class="separator">
+                </div>
+            </div>
+
+            <a href="#" class="register-button">S'INSCRIRE</a>
+        </section>
+
+        <div class="separator-section"></div>
+
+<!-- Section Valorant -->
+<section id="valo-section" class="valo-tournament-section">
+    <!-- Overlay sombre qui couvre toute l'image de fond -->
+    <div class="overlay"></div>
+
+    <h1>VALORANT</h1>
+    <p class="description">Maîtrisez chaque round à l’UPEC !</p>
+    <p class="details">Défendez ou attaquez avec précision et stratégie pour atteindre la victoire finale !</p>
+
+    <!-- Conteneur des détails du tournoi -->
+    <div class="valo-tournament-details-container">
+        <!-- Case Tournoi -->
+        <div class="valo-tournament-rules">
+            <h4>Tournoi :</h4>
+            <hr class="valo-separator">
+            <p><i class="fas fa-sync-alt"></i> <strong> Tournoi en poules : </strong> Affrontez vos adversaires dans des matchs de poules et placez-vous parmi les meilleures équipes pour accéder aux finales !</p>
+            <p><i class="fas fa-users"></i> <strong> 5vs5 : </strong> Formez des équipes de 5 !</p>
+            <p><i class="fas fa-user-secret"></i> Venez avec vos identifiants déjà prêts.</p>
+        </div>
+        <!-- Case Équipes -->
+        <div class="valo-team-status">
+            <h4>Équipes inscrites 0/4</h4>
+            <hr class="valo-separator">
+        </div>
+    </div>
+
+    <a href="#" class="valo-register-button">S'INSCRIRE</a>
+</section>
+
+<div class="separator-section"></div>
+
+<!-- Section Rocket League -->
+<section id="rl-section" class="rl-tournament-section">
+    <!-- Overlay sombre qui couvre toute l'image de fond -->
+    <div class="overlay"></div>
+
+    <h1>ROCKET LEAGUE</h1>
+    <p class="description">Football à grande vitesse à l’UPEC !</p>
+    <p class="details">Envolez-vous vers la victoire avec vos coéquipiers et marquez des buts inoubliables !</p>
+
+    <!-- Conteneur des détails du tournoi -->
+    <div class="rl-tournament-details-container">
+        <!-- Case Tournoi -->
+        <div class="rl-tournament-rules">
+            <h4>Tournoi :</h4>
+            <hr class="rl-separator">
+            <p><i class="fas fa-sync-alt"></i> <strong> Bo3 : </strong> Remportez 2 des 3 matchs pour vous qualifier en finale !</p>
+            <p><i class="fas fa-sync-alt"></i> <strong> Finale en Bo5 </strong> Remportez 3 des 5 matchs pour vous qualifier en finale !</p>
+            <p><i class="fas fa-users"></i> <strong> 3vs3</strong> Formez des équipes de 3 !</p>
+            <p><i class="fas fa-user-secret"></i> Venez avec vos identifiants déjà prêts.</p>
+        </div>
+        <!-- Case Équipes -->
+        <div class="rl-team-status">
+            <h4>Équipes inscrites 0/4</h4>
+            <hr class="rl-separator">
+        </div>
+    </div>
+
+    <a href="#" class="rl-register-button">S'INSCRIRE</a>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 UPEC Esport. Tous droits réservés.</p>
+    </footer>
+
+    <script src="./../js/tournoi.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
