@@ -20,6 +20,12 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-family: 'Audiowide', sans-serif;
 }
 
+.div_Main{
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* Styles pour l'en-tête */
 .header {
     display: flex;
