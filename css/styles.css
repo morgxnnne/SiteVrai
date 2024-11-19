@@ -20,44 +20,39 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-family: 'Audiowide', sans-serif;
 }
 
-.div_Main{
-    display: flex;
-    flex-direction: column;
-}
-
-
 /* Styles pour l'en-tête */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem; /* 20px en rem */
+    padding: 10px 20px;
     background-color: #121212;
+    height: 8vh;
+    position: relative;
+    z-index: 1000;
 }
 
 .header .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.625rem; /* 10px en rem */
+    gap: 10px;
 }
 
 .logo img {
-    height: 3.125rem; /* 50px en rem */
+    height: 3rem;
     width: auto;
-    max-width: 100%;
 }
 
 .logo span {
-    font-size: 1.25rem; /* 20px en rem */
+    font-size: 1.25rem; /* 20px */
     font-weight: bold;
-    margin-left: 0.625rem; /* 10px en rem */
+    color: #ffffff;
 }
 
 .nav ul {
-    list-style: none;
     display: flex;
-    gap: 1.875rem; /* 30px en rem */
+    gap: 2rem; /* Espacement entre les liens */
+    list-style: none;
 }
 
 .nav a {
@@ -70,46 +65,77 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 .nav a:hover {
     color: #e94560;
 }
-  
-  /* Style du menu déroulant (par défaut caché) */
-  .dropdown-content {
+
+/* Menu burger */
+.menu-checkbox {
+    display: none; /* Cache la case à cocher */
+}
+
+.open-menu {
+    display: none; /* Masqué par défaut (desktop) */
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+/* Fermer le menu */
+.close-menu {
     display: none;
-    position : absolute;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+/* Menu déroulant */
+.dropdown-content {
+    display: none;
+    position: absolute;
     right: 0;
     background-color: #333;
     min-width: 200px;
     z-index: 2;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     padding: 10px;
-  }
-  
-  .dropdown-content p {
+}
+
+.dropdown-content p {
     margin: 5px 0;
     color: #fff;
-  }
-  
-  .dropdown-content a {
-    color: #e94560; 
+}
+
+.dropdown-content a {
+    color: #e94560;
     text-decoration: none;
-  }
-  
-  .dropdown-content a:hover {
+}
+
+.dropdown-content a:hover {
     text-decoration: underline;
-  }
-  
-  /* Afficher le menu au survol du "Contact" */
-  .dropdown:hover .dropdown-content {
+}
+
+/* Afficher le menu au survol du "Contact" */
+.dropdown:hover .dropdown-content {
     display: block;
-  }
-  
-  .dropbtn:hover {
+}
+
+.dropbtn:hover {
     background-color: #444;
-  }
+}
+
 
 /* Hero Section */
 .hero {
     position: relative;
-    height: 90vh;
+    height: 92vh;
     overflow: hidden;
 }
 
@@ -154,13 +180,13 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     right: 30px;
     background-color: #e94560;
     color: #fff;
-    width: 50px; /* Largeur fixe pour assurer un cercle */
-    height: 50px; /* Hauteur égale à la largeur */
-    border-radius: 50%; /* Rend la forme circulaire */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    line-height: 50px; /* Aligne verticalement la flèche au centre */
+    line-height: 50px;
     opacity: 0;
     transition: opacity 0.3s, background-color 0.3s;
     cursor: pointer;
@@ -168,11 +194,11 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 }
 
 .back-to-top:hover {
-    background-color: #555; /* Change la couleur de fond au survol */
+    background-color: #555;
 }
 
 .back-to-top.show {
-    opacity: 1; /* Montre la flèche quand on scrolle */
+    opacity: 1;
 }
 
 .hero-text {
@@ -185,7 +211,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
 .hero-text h1 {
     font-family: 'Audiowide', sans-serif;
-    font-size: 8vh;
+    font-size: clamp(4rem, 5vw, 8vh); /* Taille responsive avec limites */
     font-weight: bold;
     color: #ffffff;
     text-align: left;
@@ -200,7 +226,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     display: flex;
     justify-content: center;
     gap: 2vw;
-    font-size: 3vh;
+    font-size: clamp(1rem, 2vw, 3vh); /* Taille adaptative */
 }
 
 /* Intro Section */
@@ -210,6 +236,8 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    text-align: center;
+    padding: 2vh 2vw;
 }
 
 .btn {
@@ -224,7 +252,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     margin: 2vh 0;
     width: auto;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem); /* Taille adaptative */
 }
 
 .btn:hover {
@@ -278,10 +306,11 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap; /* Permet le basculement des éléments si nécessaire */
 }
 
 .intro-image {
-    flex: 0 0 30%;
+    flex: 0 0 clamp(25%, 30%, 35%); /* Taille adaptative pour tablettes et desktop */
     padding-right: 5vw;
 }
 
@@ -301,32 +330,34 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 }
 
 .intro-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    object-fit: cover;
-    margin-left: 5vw;
+    max-width: 100%; /* Assure que l'image ne dépasse jamais le conteneur */
+    width: 100%; /* Utilise toute la largeur disponible */
+    height: auto; /* Respecte le ratio original */
+    border-radius: 1rem; /* Coins arrondis */
+    object-fit: cover; /* Remplit l'image sans distorsion */
+    margin-left: 0; /* Retire la marge gauche sur petits écrans */
 }
+
 
 .intro-title {
     font-family: 'Audiowide', sans-serif;
-    font-size: 4vh;
+    font-size: clamp(2rem, 3vw, 4vh); /* Taille adaptative pour toutes les résolutions */
     color: #e94560;
     margin-bottom: 5vh;
-    text-align: left;
+    text-align: center;
 }
 
 .intro-description {
-    font-size: 1.8vh;
+    font-size: clamp(1.2rem, 1.5vw, 1.8vh); /* Taille adaptative */
     color: #ffffff;
     margin-bottom: 3vh;
-    text-align: left;
-    max-width: 50%;
+    text-align: center;
+    max-width: 80%; /* Limite la largeur sur téléphones */
     line-height: 1.8;
+    word-wrap: break-word; /* Gère les mots longs */
 }
 
 .separator {
-    height: 0.1vh;
     background: linear-gradient(to right, #e94560, #ffffff);
     background-color: #121212;
     margin: 0 auto;
@@ -335,16 +366,11 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     animation: fadeIn 1s forwards;
 }
 
-@keyframes fadeIn {
-    100% {
-        opacity: 1;
-    }
-}
-
 /* Game Posters */
 .game-posters {
     display: flex;
     justify-content: center;
+    align-items: stretch; /* Force tous les posters à avoir la même hauteur */
     gap: 5vw;
     padding: 10vh 2vw;
     background-color: #121212;
@@ -352,17 +378,54 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
 .poster {
     position: relative;
-    width: 20vw;
     text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     padding: 2vh 2vw;
     background-color: #1a1a1d;
     border-radius: 1rem;
     box-shadow: 0 0.5vh 1.5vh rgba(233, 69, 96, 0.3);
     transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.poster:hover {
+    transform: translateY(-1vh);
+    box-shadow: 0 1.5vh 3vh rgba(233, 69, 96, 0.7);
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.poster .game-description {
+    flex-grow: 1;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 2vh;
+    margin: 2vh auto 1vh;
+    max-width: 100%;
+    line-height: 1.5;
+    overflow-wrap: break-word; /* Casse les mots longs si nécessaire */
+}
+
+.poster .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.8rem, 0.5rem + 0.2vw, 1.5rem); /* Taille adaptative avec limites */
+    padding: 0 1rem;
+    width: auto; /* Ajustement automatique selon le contenu */
+    height: calc(6vh + 10px); /* Hauteur uniforme calculée */
+    background-color: #e94560;
+    color: #fff;
+    border-radius: 0.5rem;
+    text-align: center;
+    white-space: normal; /* Permet les retours à la ligne */
+    line-height: 1.2;
+    transition: background-color 0.3s;
 }
 
 .poster img {
@@ -384,13 +447,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     flex: 1;
 }
 
-.poster .btn {
-    display: block; 
-    width: 90%;
-    padding: 1vh 0; 
-    text-align: center;
-    font-size: 1.5rem; 
-}
 
 .poster:hover {
     transform: translateY(-1vh);
@@ -398,40 +454,219 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-    .logo img {
-        height: 4vh;
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 576px) {
+
+    .nav ul {
+        position: fixed;
+        top: 8vh; /* En dessous du header */
+        right: -100%; /* Côté droit, hors écran */
+        width: 70%;
+        height: calc(100vh - 8vh); /* Hauteur restante après le header */
+        background-color: #121212;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
     }
 
-    .logo span {
-        font-size: 1rem;
+    /* Afficher le menu burger lorsque la case est cochée */
+    .menu-checkbox:checked ~ .nav ul {
+        right: 0; /* Fait glisser le menu dans la vue */
+    }
+
+    /* Afficher le bouton "close" quand le menu est ouvert */
+    .menu-checkbox:checked ~ .close-menu {
+        display: block;
+    }
+
+    /* Masquer le bouton "burger" quand le menu est ouvert */
+    .menu-checkbox:checked ~ .open-menu {
+        display: none;
+    }
+
+    /* Afficher le menu burger sur mobile */
+    .open-menu {
+        display: block;
+    }
+
+    /* Cacher la navigation classique sur mobile */
+    .nav ul {
+        display: flex;
     }
 
     .hero-text h1 {
-        font-size: 4vh;
-        margin-bottom: 1vh;
+        font-size: clamp(2rem, 5vw, 4rem);
+        width: 90%; /* Plus de largeur pour le texte */
+        margin-left: 5%;
+    }
+
+    .hero-text .buttons {
+        flex-direction: column; /* Boutons empilés */
+        gap: 1vh;
+    }
+
+    .trapezoid {
+        width: 50%;
+        height: 5vh;
     }
 
     .buttons {
-        flex-direction: column;
-        gap: 1vh;
+        padding: 5%;
     }
+
+
+    .programme-intro {
+        padding: 10vh 2vw; /* Réduction du padding pour petits écrans */
+        flex-direction: column;
+    }
+
+    .intro-content {
+        flex-direction: column; /* Place l'image en dessous du texte */
+    }
+
+    .intro-image {
+        flex: 0 0 100%; /* L'image occupe toute la largeur */
+        padding-right: 0;
+        margin-top: 2vh;
+    }
+
+    .intro-image img {
+        max-width: 100%; /* L'image ne dépasse jamais la largeur de l'écran */
+        width: 100%; /* Utilise toute la largeur disponible */
+        margin-left: 0; /* Supprime la marge gauche */
+        border-radius: 1rem; /* Maintient les coins arrondis */
+    }
+
+    .intro-text {
+        align-items: center; /* Centre le texte */
+        text-align: center;
+    }
+
+    .intro-description {
+        font-size: 1.5vh; /* Texte légèrement réduit */
+        max-width: 90%; /* Augmente la largeur du texte */
+    }
+
+    .game-posters {
+        flex-direction: column;
+        gap: calc(2vh + 10px); /* Espacement entre les posters */
+        padding: 2vh 2vw;
+    }
+
+    .poster {
+        width: 100%;
+    }
+
+    .poster .game-description {
+        font-size: calc(1rem + 0.5vw);
+    }
+
+}
+
+/* Tablettes */
+@media (min-width: 577px) and (max-width: 799px) {
 
     .nav ul {
+        position: fixed;
+        top: 8vh; /* En dessous du header */
+        right: -100%; /* Côté droit, hors écran */
+        width: 70%;
+        height: calc(100vh - 8vh); /* Hauteur restante après le header */
+        background-color: #121212;
         flex-direction: column;
         align-items: center;
-        gap: 1vh;
+        justify-content: center;
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
     }
 
-    .nav a {
-        font-size: 1.2rem;
+    /* Afficher le menu burger lorsque la case est cochée */
+    .menu-checkbox:checked ~ .nav ul {
+        right: 0; /* Fait glisser le menu dans la vue */
     }
 
-    .footer .icons {
-        flex-direction: column;
-        gap: 1vh;
+    /* Afficher le bouton "close" quand le menu est ouvert */
+    .menu-checkbox:checked ~ .close-menu {
+        display: block;
+    }
+
+    /* Masquer le bouton "burger" quand le menu est ouvert */
+    .menu-checkbox:checked ~ .open-menu {
+        display: none;
+    }
+
+    /* Afficher le menu burger sur mobile */
+    .open-menu {
+        display: block;
+    }
+
+    /* Cacher la navigation classique sur mobile */
+    .nav ul {
+        display: flex;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(3rem, 6vw, 5rem);
+        width: 80%;
+    }
+
+    .game-posters {
+        justify-content: space-between;
+        gap: calc(2vh + 10px);
+    }
+
+    .poster {
+        width: calc(50% - 2vw);
+    }
+
+    .poster .game-description {
+        font-size: min(0.8rem, 3vw);
     }
 }
+
+/* PC portables */
+@media (min-width: 800px) and (max-width: 1024px) {
+    .game-posters {
+        justify-content: space-between;
+        gap: calc(2vh + 10px);
+    }
+
+    .poster {
+        width: calc(33.33% - 2vw);
+    }
+
+    .poster .game-description {
+        font-size: min(0.7rem, 2.5vw);
+    }
+}
+
+/* PC fixes */
+@media (min-width: 1025px) {
+    .game-posters {
+        justify-content: space-between;
+        gap: calc(1vw); /* Réduction de l'espacement entre les posters */
+    }
+
+    .poster {
+        width: calc(30% - 1vw); /* Réduction légère pour inclure plus d'espace disponible */
+    }
+
+    .poster .game-description {
+        font-size: min(0.8rem, 3vw);
+    }
+}
+
+
+
 
 
 

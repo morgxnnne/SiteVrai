@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tournoi E-Sport UPEC 2024</title>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/styles.css">
     
 </head>
 <body>
-     <!-- En-tête -->
-     <header class="header">
+    <header class="header">
+        <!-- Logo -->
         <div class="logo">
             <img src="../assets/upec_logo.png" alt="Logo UPEC" loading="lazy">
             <span>ESPORT</span>
         </div>
+    
+        <!-- Menu Burger -->
+        <input type="checkbox" id="check" class="menu-checkbox" aria-label="Menu burger" />
+        <label for="check" class="open-menu">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label for="check" class="close-menu">
+            <i class="fas fa-times"></i>
+        </label>
+    
+        <!-- Navigation -->
         <nav class="nav">
             <ul>
                 <li><a href="../html/index.html" aria-label="Page d'accueil">Accueil</a></li>
@@ -26,82 +38,88 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Contact</a>
                     <div class="dropdown-content">
-                      <p><strong>Email:</strong> contact@votre-email.com</p>
-                      <p><strong>Twitch:</strong> <a href="https://www.twitch.tv/votre_twitch" target="_blank">Notre Twitch</a></p>
-                      <p><strong>Discord:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Rejoignez notre serveur</a></p>
+                        <p><strong>Email:</strong> contact@votre-email.com</p>
+                        <p><strong>Twitch:</strong> <a href="https://www.twitch.tv/votre_twitch" target="_blank">Notre Twitch</a></p>
+                        <p><strong>Discord:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Rejoignez notre serveur</a></p>
                     </div>
-                  </li>
+                </li>
             </ul>
         </nav>
     </header>
-    <div class="div_Main">
-        <main class="hero">
-            <video class="background-video" autoplay loop muted playsinline>
-                <source src="../assets/background.mp4" type="video/mp4">
-            </video>
-            <div class="overlay"></div>
-            <div class="hero-text">
-                <h1>Tournoi E-Sport Universitaire UPEC 2024</h1>
-                <div class="buttons">
-                    <a href="#programme-intro" class="btn">DÉCOUVRIR LE PROGRAMME</a>
-                    <a href="#" class="btn secondary">S'INSCRIRE MAINTENANT</a>
-                </div>
-            </div>
-            <div class="trapezoid">
-                <div class="icons">
-                    <a href="https://discord.com" target="_blank">
-                        <img src="../assets/discord_logo.png" alt="Logo Discord" class="icon">
-                    </a>
-                    <a href="https://twitch.tv" target="_blank">
-                        <img src="../assets/twitch_logo.png" alt="Logo Twitch" class="icon">
-                    </a>
-                </div>
-            </div>
-        </main>
-        
-        <a href="#" class="back-to-top">↑</a>
+    
+    
+    
 
-        <section id="programme-intro" class="programme-intro">
-            <div class="intro-content">
+    
+    
+
+    <main class="hero">
+        <video class="background-video" autoplay loop muted playsinline>
+            <source src="../assets/background2.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>Tournoi E-Sport Universitaire UPEC 2024</h1>
+            <div class="buttons">
+                <a href="#programme-intro" class="btn">DÉCOUVRIR LE PROGRAMME</a>
+                <a href="#" class="btn secondary">S'INSCRIRE MAINTENANT</a>
+            </div>
+        </div>
+        <div class="trapezoid">
+            <div class="icons">
+                <a href="https://discord.com" target="_blank">
+                    <img src="../assets/discord_logo.png" alt="Logo Discord" class="icon">
+                </a>
+                <a href="https://twitch.tv" target="_blank">
+                    <img src="../assets/twitch_logo.png" alt="Logo Twitch" class="icon">
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <a href="#" class="back-to-top">↑</a>
+
+    <section id="programme-intro" class="programme-intro">
+        <div class="intro-content">
+            
+            <div class="intro-image">
+                <img src="../assets/pc.png" alt="PC" />
+            </div>
+            
+            <div class="intro-text">
+                <h2 class="intro-title">Découvrir le Programme</h2>
+                <div class="intro-description">
+                    <p>Rejoignez-nous le 12 décembre 2024 au MILKLUB ESPORT pour un tournoi e-sport au sein de l’UPEC où des équipes s’affronteront sur les plus grands jeux pour décrocher le titre de champion !</p>
+                </div>
                 
-                <div class="intro-image">
-                    <img src="../assets/pc.png" alt="PC" />
-                </div>
-                
-                <div class="intro-text">
-                    <h2 class="intro-title">Découvrir le Programme</h2>
-                    <div class="intro-description">
-                        <p>Rejoignez-nous le 12 décembre 2024 au MILKLUB ESPORT pour un tournoi e-sport au sein de l’UPEC où des équipes s’affronteront sur les plus grands jeux pour décrocher le titre de champion !</p>
-                    </div>
-                    
-                    <a href="#game-posters" class="btn">VOIR LES JEUX PROPOSÉS</a>
-                </div>
+                <a href="#game-posters" class="btn">VOIR LES JEUX PROPOSÉS</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <div class="separator"></div>
+    <div class="separator"></div>
 
-        <section class="game-posters" id="game-posters">
-            <div class="poster">
-                <img src="../assets/lol.png" alt="League of Legends">
-                <p class="game-description">"League of Legends est un jeu de stratégie en temps réel où deux équipes de cinq joueurs s'affrontent pour détruire la base ennemie. Coordination et choix des champions sont essentiels pour la victoire!"</p>
-                <a href="tournoi.html#lol-section" class="btn" onclick="scrollToSection('lol-section')">VOIR LE TOURNOI LEAGUE OF LEGENDS</a> 
-            </div>
-            <div class="poster">
-                <img src="../assets/valo.png" alt="Valorant">
-                <p class="game-description">"Valorant est un jeu de tir tactique en 5v5 où précision et stratégie sont primordiales. Choisissez votre agent, exécutez des stratégies audacieuses, et montrez vos talents de tireur !"</p>
-                <a href="tournoi.html#valo-section" class="btn" onclick="scrollToSection('valo-section')">VOIR LE TOURNOI VALORANT</a> <!-- Lien vers la page tournoi Valorant -->
-            </div>
-            <div class="poster">
-                <img src="../assets/rl.png" alt="Rocket League">
-                <p class="game-description">"Rocket League mélange football et voitures propulsées par des fusées ! Les équipes de trois joueurs s'affrontent dans des arènes palpitantes pour marquer des buts spectaculaires."</p>
-                <a href="tournoi.html#rl-section" class="btn" onclick="scrollToSection('rl-section')">VOIR LE TOURNOI ROCKET LEAGUE</a> <!-- Lien vers la page tournoi Rocket League -->
+    <section class="game-posters" id="game-posters">
+        <div class="poster">
+            <img src="../assets/lol.png" alt="League of Legends">
+            <p class="game-description">"League of Legends est un jeu de stratégie en temps réel où deux équipes de cinq joueurs s'affrontent pour détruire la base ennemie. Coordination et choix des champions sont essentiels pour la victoire!"</p>
+            <a href="tournoi.html#lol-section" class="btn" onclick="scrollToSection('lol-section')">VOIR LE TOURNOI LEAGUE OF LEGENDS</a> 
+        </div>
+        <div class="poster">
+            <img src="../assets/valo.png" alt="Valorant">
+            <p class="game-description">"Valorant est un jeu de tir tactique en 5v5 où précision et stratégie sont primordiales. Choisissez votre agent, exécutez des stratégies audacieuses, et montrez vos talents de tireur !"</p>
+            <a href="tournoi.html#valo-section" class="btn" onclick="scrollToSection('valo-section')">VOIR LE TOURNOI VALORANT</a> <!-- Lien vers la page tournoi Valorant -->
+        </div>
+        <div class="poster">
+            <img src="../assets/rl.png" alt="Rocket League">
+            <p class="game-description">"Rocket League mélange football et voitures propulsées par des fusées ! Les équipes de trois joueurs s'affrontent dans des arènes palpitantes pour marquer des buts spectaculaires."</p>
+            <a href="tournoi.html#rl-section" class="btn" onclick="scrollToSection('rl-section')">VOIR LE TOURNOI ROCKET LEAGUE</a> <!-- Lien vers la page tournoi Rocket League -->
 
-            </div>
-        </section>
-        
-        <script src="./../js/main.js"></script>
-    </div>
+        </div>
+    </section>
+    
+    <script src="./../js/main.js"></script>
+    
 
 </body>
 </html>
