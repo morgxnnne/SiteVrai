@@ -40,94 +40,39 @@
         </nav>
     </header>
 
-    <section class="lol-teams-section">
-        <div class="overlay"></div>
-        <h1>Équipes League of Legends</h1>
-        <div class="teams-container">
-            <div class="team">
-                <h2>Team Alpha</h2>
-                <p>Joueurs :</p>
-                <ul>
-                    <li>Joueur1</li>
-                    <li>Joueur2</li>
-                    <li>Joueur3</li>
-                    <li>Joueur4</li>
-                    <li>Joueur5</li>
-                </ul>
-            </div>
-            <div class="team">
-                <h2>Team Beta</h2>
-                <p>Joueurs :</p>
-                <ul>
-                    <li>JoueurA</li>
-                    <li>JoueurB</li>
-                    <li>JoueurC</li>
-                    <li>JoueurD</li>
-                    <li>JoueurE</li>
-                </ul>
-            </div>
-            <!-- Ajoute d'autres équipes ici -->
+    <div class="team-page-container">
+        <!-- Formulaire pour ajouter des poules et des équipes -->
+        <div class="add-pool-form">
+            <h2>Ajouter une Poule et des Équipes</h2>
+            <input type="text" id="pool-name" placeholder="Nom de la Poule" required>
+            <input type="text" id="team-name" placeholder="Nom de l'Équipe" required>
+            <button onclick="addPool()">Créer Poule</button>
+            <button onclick="addTeam()">Ajouter Équipe</button>
         </div>
-    </section>
-    
-    <!-- Section pour les équipes de Valorant -->
-    <section class="valo-teams-section">
-        <div class="overlay"></div>
-        <h1>Équipes Valorant</h1>
-        <div class="teams-container">
-            <div class="team">
-                <h2>Team Vortex</h2>
-                <p>Joueurs :</p>
-                <ul>
-                    <li>Player1</li>
-                    <li>Player2</li>
-                    <li>Player3</li>
-                    <li>Player4</li>
-                    <li>Player5</li>
-                </ul>
+
+        <!-- Sections des jeux -->
+        <section class="team-section lol-section">
+            <h2>League of Legends</h2>
+            <div class="pools-container" id="lol-pools">
+                <!-- Poules ajoutées dynamiquement -->
             </div>
-            <div class="team">
-                <h2>Team Mirage</h2>
-                <p>Joueurs :</p>
-                <ul>
-                    <li>PlayerA</li>
-                    <li>PlayerB</li>
-                    <li>PlayerC</li>
-                    <li>PlayerD</li>
-                    <li>PlayerE</li>
-                </ul>
+        </section>
+
+        <section class="team-section valo-section">
+            <h2>VALORANT</h2>
+            <div class="pools-container" id="valo-pools">
+                <!-- Poules ajoutées dynamiquement -->
             </div>
-            <!-- Ajoute d'autres équipes ici -->
-        </div>
-    </section>
-    
-    <!-- Section pour les équipes de Rocket League -->
-    <section class="rl-teams-section">
-        <div class="overlay"></div>
-        <h1>Équipes Rocket League</h1>
-        <div class="teams-container">
-            <div class="team">
-                <h2>Rocket Stars</h2>
-                <p>Joueurs :</p>
-                <ul>
-                    <li>Rocket1</li>
-                    <li>Rocket2</li>
-                    <li>Rocket3</li>
-                    <li>Rocket4</li>
-                    <li>Rocket5</li>
-                </ul>
+        </section>
+
+        <section class="team-section rl-section">
+            <h2>ROCKET LEAGUE</h2>
+            <div class="pools-container" id="rl-pools">
+                <!-- Poules ajoutées dynamiquement -->
             </div>
-            <div class="team">
-                <h2>Team Boosters</h2>
-                <p>Joueurs :</p>
-                <ul>
-                    <li>Boost1</li>
-                    <li>Boost2</li>
-                    <li>Boost3</li>
-                    <li>Boost4</li>
-                    <li>Boost5</li>
-                </ul>
-            </div>
-            <!-- Ajoute d'autres équipes ici -->
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

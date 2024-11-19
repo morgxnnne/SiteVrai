@@ -100,6 +100,106 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     background-color: #444;
   }
   
+  ody {
+    font-family: 'Audiowide', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.team-page-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.team-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.lol-section {
+    background-image: url('../assets/fond_lol.png');
+    border: 2px solid #dda868;
+}
+
+.valo-section {
+    background-image: url('../assets/fond_valo.png');
+    background-size: cover;
+    background-position: center 80vh;
+    border: 2px solid #c62c2c;
+}
+
+.rl-section {
+    background-image: url('../assets/fond-rl.png');
+    background-size: cover;
+    background-position: center 50vh;
+    border: 2px solid #316ec9;
+}
+
+.lol-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Cinzel Decorative';
+    color: #dda868;
+}
+
+.valo-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Audiowide';
+  color:#c62c2c;
+}
+
+.rl-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Rajdhani';
+  color:#316ec9;
+}
+
+.add-pool-form {
+    background-color: #333;
+    padding: 1.5rem;
+    border-radius: 0.625rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.add-pool-form input {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+.add-pool-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3125rem;
+    background-color: #e94560;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.add-pool-form button:hover {
+    background-color: #d63447;
+}
+
+.team-section.active {
+    border: 2px solid #ffffff; /* Pour mettre en évidence la section active */
+}
+
 .back-to-top {
     position: fixed;
     bottom: 1.875rem; /* 30px en rem */

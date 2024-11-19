@@ -23,3 +23,73 @@ function toggleDropdown() {
     var content = document.querySelector('.dropdown-content');
     content.style.display = content.style.display === 'block' ? 'none' : 'block';
   }
+
+  // Variables pour stocker les poules et les équipes
+let currentPool = null;
+let currentGameSection = null;
+
+// Fonction pour ajouter une nouvelle poule
+function addPool() {
+    const poolName = document.getElementById("pool-name").value;
+    if (!poolName) {
+        alert("Veuillez entrer un nom pour la poule.");
+        return;
+    }
+
+    // Choisir la section de jeu correcte
+    currentGameSection = document.querySelector(".team-section.active");
+    if (!currentGameSection) {
+        alert("Veuillez sélectionner une section de jeu.");
+        return;
+    }
+
+    const poolsContainer = currentGameSection.querySelector(".pools-container");
+
+    // Créer l'élément HTML pour la poule
+    const poolDiv = document.createElement("div");
+    poolDiv.classList.add("pool");
+
+    const poolTitle = document.createElement("h3");
+    poolTitle.textContent = poolName;
+    poolDiv.appendChild(poolTitle);
+
+    const teamList = document.createElement("div");
+    teamList.classList.add("team-list");
+    poolDiv.appendChild(teamList);
+
+    const bracket = document.createElement("div");
+    bracket.classList.add("bracket");
+    bracket.innerHTML = "<p>Arbre de Bracket (exemple)</p>";
+    poolDiv.appendChild(bracket);
+
+    // Ajouter la poule au conteneur
+    poolsContainer.appendChild(poolDiv);
+
+    // Définir la poule actuelle pour y ajouter des équipes
+    currentPool = teamList;
+
+    // Vider l'input du nom de la poule
+    document.getElementById("pool-name").value = "";
+}
+
+// Fonction pour ajouter une équipe à la poule actuelle
+function addTeam() {
+    if (!currentPool) {
+        alert("Veuillez d'abord créer une poule.");
+        return;
+    }
+
+    const teamName = document.getElementById("team-name").value;
+    if (!teamName) {
+        alert("Veuillez entrer un nom pour l'équipe.");
+        return;
+    }
+
+    // Créer l'élément HTML pour l'équipe
+    const teamElement = document.createElement("p");
+    teamElement.textContent = teamName;
+    currentPool.appendChild(teamElement);
+
+    // Vider l'input du nom de l'équipe
+    document.getElementById("team-name").value = "";
+}
