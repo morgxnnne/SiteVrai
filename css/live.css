@@ -9,56 +9,42 @@
 body {
     font-family: 'Audiowide', sans-serif;
     color: #ffffff;
-    background-color: #000000;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
     line-height: 1.5;
-    font-size: 1rem; /* 16px équivaut à 1rem */
-    overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
-    font-family: 'Audiowide', sans-serif;
-}
-
-/* Styles pour l'en-tête */
+/* En-tête */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem; /* 20px en rem */
+    padding: 1.25rem;
     background-color: #121212;
 }
 
-.header .logo {
+.logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.625rem; /* 10px en rem */
+    gap: 10px;
 }
 
 .logo img {
-    height: 3.125rem; /* 50px en rem */
+    height: 50px;
     width: auto;
-    max-width: 100%;
-}
-
-.logo span {
-    font-size: 1.25rem; /* 20px en rem */
-    font-weight: bold;
-    margin-left: 0.625rem; /* 10px en rem */
 }
 
 .nav ul {
-    list-style: none;
     display: flex;
-    gap: 1.875rem; /* 30px en rem */
+    list-style: none;
+    gap: 30px;
 }
 
 .nav a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
 .nav a:hover {
@@ -109,40 +95,42 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     line-height: 1.5;
 }
 
+
+/* Bouton retour en haut */
 .back-to-top {
     position: fixed;
-    bottom: 1.875rem; /* 30px en rem */
-    right: 1.875rem; /* 30px en rem */
+    bottom: 30px;
+    right: 30px;
     background-color: #e94560;
-    color: #fff;
-    width: 3.125rem; /* 50px en rem */
-    height: 3.125rem; /* 50px en rem */
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     text-align: center;
-    text-decoration: none;
-    font-size: 1.25rem; /* 20px en rem */
-    line-height: 3.125rem; /* 50px en rem */
+    font-size: 20px;
+    line-height: 50px;
     opacity: 0;
-    transition: opacity 0.3s, background-color 0.3s;
     cursor: pointer;
+    transition: opacity 0.3s, background-color 0.3s;
     z-index: 1000;
-}
-
-.back-to-top:hover {
-    background-color: #555;
 }
 
 .back-to-top.show {
     opacity: 1;
 }
 
-.team-page-container {
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* Sections des streams */
+.live-page-container {
     width: 90%;
     margin: 0 auto;
     padding: 2rem 0;
 }
 
-.team-section {
+.live-section {
     margin-bottom: 4rem;
     padding: 2rem;
     border-radius: 0.625rem;
@@ -156,15 +144,11 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
 .valo-section {
     background-image: url('../assets/fond_valo.png');
-    background-size: cover;
-    background-position: center 80vh;
     border: 2px solid #c62c2c;
 }
 
 .rl-section {
     background-image: url('../assets/fond-rl.png');
-    background-size: cover;
-    background-position: center 50vh;
     border: 2px solid #316ec9;
 }
 
@@ -186,50 +170,116 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
 .rl-section h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
   font-family: 'Rajdhani';
   color:#316ec9;
 }
 
-.pools-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-around;
-}
-
-.pool {
-    flex: 1 1 45%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    text-align: center;
-}
-
-.pool h3 {
-    font-size: 1.875rem;
-    margin-bottom: 1rem;
-    color: #e94560;
-}
-
-.team-list {
-    margin-bottom: 1.5rem;
-}
-
-.team-list p {
-    margin: 0.5rem 0;
-    font-size: 1.25rem;
-}
-
-.bracket {
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.3125rem;
-}
-
-.bracket p {
+.lol-match-header {
+    width: 50%; 
+    background-color:#dda868;
     color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%); 
+    border-radius: 8px; 
+    margin: 0 auto; 
+}
+
+.valo-match-header {
+    width: 50%; 
+    background-color:#c62c2c;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%); 
+    border-radius: 8px; 
+    margin: 0 auto; 
+}
+
+.rl-match-header {
+    width: 50%; 
+    background-color:#316ec9;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%); 
+    border-radius: 8px; 
+    margin: 0 auto; 
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Prochains Matchs */
+.upcoming-matches h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.upcoming-matches ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.upcoming-matches li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Scores Terminés */
+.finished-scores h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.finished-scores ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.finished-scores li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Section Admin */
+.admin-section {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.admin-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-section input,
+.admin-section button {
+    padding: 1rem;
     font-size: 1rem;
 }
 
+.admin-section button {
+    background-color: #e94560;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.admin-section button:hover {
+    background-color: #d33f50;
+}
