@@ -53,6 +53,11 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     margin-left: 0.625rem; /* 10px en rem */
 }
 
+/* Menu burger */
+.menu-checkbox {
+    display: none; /* Cache la case à cocher */
+}
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -316,11 +321,8 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     padding: 5rem 2vw;
     text-align: left;
     font-family: 'Cinzel Decorative';
-    /* min-height: 90vh; */ /* Hauteur relative */
-    /* z-index: 0; */
     box-shadow: 0 0.25rem 1rem rgba(123, 92, 34, 0.51); /* Ombre douce */
     border-radius: 0.625rem;
-    /* min-width: 95vw; */ /* Largeur relative */
     width: 105rem; /* Largeur relative */
     margin: 0 auto;
     display: flex;
@@ -715,6 +717,18 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     background-color: #121212;
 }
 
-
+/* Responsive CSS */
+/* Pour les écrans de taille inférieure à 768px (tablette) */
+@media (max-width: 800px) {
+    .menu-logos {
+        display: none; /* Cache les logos fixes à droite pour ne pas encombrer l'écran */
+    }
+}
+   
+@media (max-width: 400px) {
+    .menu-logos {
+        display: none; /* Cache les logos fixes à droite pour ne pas encombrer l'écran */
+    }
+}
 
 

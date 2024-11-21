@@ -19,6 +19,16 @@
             <img src="../assets/upec_logo.png" alt="Logo UPEC" loading="lazy">
             <span>ESPORT</span>
         </div>
+
+                <!-- Menu Burger -->
+                <input type="checkbox" id="check" class="menu-checkbox" aria-label="Menu burger" />
+                <label for="check" class="open-menu">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label for="check" class="close-menu">
+                    <i class="fas fa-times"></i>
+                </label>
+
         <nav class="nav">
             <ul>
                 <li><a href="../index.html" aria-label="Page d'accueil">Accueil</a></li>
@@ -30,7 +40,7 @@
                     <div class="dropdown-content">
                       <p><strong>Email:</strong> contact@votre-email.com</p>
                       <p><strong>Twitch:</strong> <a href="https://www.twitch.tv/votre_twitch" target="_blank">Notre Twitch</a></p>
-                      <p><strong>Discord:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Rejoignez notre serveur</a></p>
+                      <p><strong>Discord:</strong> <a href="https://discord.gg/92ct7Z5H" target="_blank">Rejoignez notre serveur</a></p>
                       <p><strong>Instagram:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Notre Instagram</a></p>
                       <p><strong>Tiktok:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Notre compte Tiktok</a></p>
                     </div>
@@ -41,9 +51,21 @@
 
     <a href="#" class="back-to-top">↑</a>
 
+    <div class="menu-logos">
+        <div class="logo-item" id="logo-lol">
+            <img src="../assets/logo_lol.png" alt="LOL Logo">
+        </div>
+        <div class="logo-item" id="logo-valorant">
+            <img src="../assets/logo_valo.png" alt="Valorant Logo">
+        </div>
+        <div class="logo-item" id="logo-rl">
+            <img src="../assets/logo_rl.png" alt="Rl Logo">
+        </div>
+    </div>
+
     <div class="team-page-container">
         <!-- Section League of Legends -->
-        <section class="team-section lol-section">
+        <section id="lol-section"class="team-section lol-section">
             <h2>League of Legends</h2>
             <div class="pools-container">
                 <div class="pool">
@@ -78,7 +100,7 @@
         </section>
     
         <!-- Section Valorant -->
-        <section class="team-section valo-section">
+        <section id="valo-section"class="team-section valo-section">
             <h2>VALORANT</h2>
             <div class="pools-container">
                 <!-- Repeat structure for Valorant Pools -->
@@ -113,7 +135,7 @@
         </section>
     
         <!-- Section Rocket League -->
-        <section class="team-section rl-section">
+        <section id="rl-section"class="team-section rl-section">
             <h2>ROCKET LEAGUE</h2>
             <div class="pools-container">
                 <!-- Repeat structure for Rocket League Pools -->

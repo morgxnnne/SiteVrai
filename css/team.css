@@ -48,6 +48,11 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     margin-left: 0.625rem; /* 10px en rem */
 }
 
+/* Menu burger */
+.menu-checkbox {
+    display: none; /* Cache la case à cocher */
+}
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -136,6 +141,38 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     opacity: 1;
 }
 
+.menu-logos {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.logo-item {
+    width: 6.25rem; /* 100px en rem */
+    height: 6.25rem; /* 100px en rem */
+    background-color: #1e1e1e;
+    border-radius: 1.25rem 0 0 1.25rem; /* 10px en rem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s, width 0.3s;
+}
+
+.logo-item img {
+    width: 60%;
+    height: auto;
+}
+
+.logo-item.active {
+    transform: translateX(-1.25rem); /* 20px en rem */
+    width: 7.5rem; /* 120px en rem */
+}
+
 .team-page-container {
     width: 90%;
     margin: 0 auto;
@@ -151,20 +188,22 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
 .lol-section {
     background-image: url('../assets/fond_lol.png');
+    background-size: cover;
+    background-position: center center;
     border: 2px solid #dda868;
 }
 
 .valo-section {
     background-image: url('../assets/fond_valo.png');
     background-size: cover;
-    background-position: center 80vh;
+    background-position: center center;
     border: 2px solid #c62c2c;
 }
 
 .rl-section {
     background-image: url('../assets/fond-rl.png');
     background-size: cover;
-    background-position: center 50vh;
+    background-position: center center;
     border: 2px solid #316ec9;
 }
 
@@ -188,7 +227,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-family: 'Rajdhani';
+  font-family: 'Audiowide';
   color:#316ec9;
 }
 
@@ -233,3 +272,16 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-size: 1rem;
 }
 
+/* Responsive CSS */
+/* Pour les écrans de taille inférieure à 768px (tablette) */
+@media (max-width: 800px) {
+    .menu-logos {
+        display: none; /* Cache les logos fixes à droite pour ne pas encombrer l'écran */
+    }
+}
+   
+@media (max-width: 400px) {
+    .menu-logos {
+        display: none; /* Cache les logos fixes à droite pour ne pas encombrer l'écran */
+    }
+}

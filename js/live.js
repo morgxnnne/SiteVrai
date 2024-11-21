@@ -23,3 +23,41 @@ function toggleDropdown() {
     var content = document.querySelector('.dropdown-content');
     content.style.display = content.style.display === 'block' ? 'none' : 'block';
   }
+
+// Sélection des sections par ID
+const sections = document.querySelectorAll('#lol-section, #valo-section, #rl-section');
+
+// Sélection des logos
+const logoItems = {
+    "lol-section": document.querySelector('#logo-lol'),
+    "valo-section": document.querySelector('#logo-valorant'),
+    "rl-section": document.querySelector('#logo-rl')
+};
+
+// Intersection Observer pour activer le logo correspondant lorsque la section est visible
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Supprime la classe 'active' de tous les logos
+            Object.values(logoItems).forEach(item => item.classList.remove('active'));
+            // Ajoute la classe 'active' au logo de la section visible
+            const activeLogo = logoItems[entry.target.id];
+            if (activeLogo) activeLogo.classList.add('active');
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observer chaque section
+sections.forEach(section => observer.observe(section));
+
+// Événements de clic pour défiler jusqu'à la section correspondante
+Object.keys(logoItems).forEach(key => {
+    const logo = logoItems[key];
+    logo.addEventListener('click', () => {
+        const targetSection = document.querySelector(`#${key}`);
+        targetSection.scrollIntoView({
+            behavior: 'smooth', // Animation fluide
+            block: 'start' // Aligner en haut de la section
+        });
+    });
+});

@@ -21,6 +21,16 @@
             <img src="../assets/upec_logo.png" alt="Logo UPEC" loading="lazy">
             <span>ESPORT</span>
         </div>
+
+                <!-- Menu Burger -->
+                <input type="checkbox" id="check" class="menu-checkbox" aria-label="Menu burger" />
+                <label for="check" class="open-menu">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label for="check" class="close-menu">
+                    <i class="fas fa-times"></i>
+                </label>
+
         <nav class="nav">
             <ul>
                 <li><a href="../index.html" aria-label="Page d'accueil">Accueil</a></li>
@@ -32,7 +42,7 @@
                     <div class="dropdown-content">
                         <p><strong>Email:</strong> contact@votre-email.com</p>
                         <p><strong>Twitch:</strong> <a href="https://www.twitch.tv/votre_twitch" target="_blank">Notre Twitch</a></p>
-                        <p><strong>Discord:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Rejoignez notre serveur</a></p>
+                        <p><strong>Discord:</strong> <a href="https://discord.gg/92ct7Z5H" target="_blank">Rejoignez notre serveur</a></p>
                         <p><strong>Instagram:</strong> <a href="https://instagram.com/votre_instagram" target="_blank">Notre Instagram</a></p>
                         <p><strong>Tiktok:</strong> <a href="https://tiktok.com/@votre_tiktok" target="_blank">Notre compte Tiktok</a></p>
                     </div>
@@ -41,11 +51,22 @@
         </nav>
     </header>
 
+    <div class="menu-logos">
+        <div class="logo-item" id="logo-lol">
+            <img src="../assets/logo_lol.png" alt="LOL Logo">
+        </div>
+        <div class="logo-item" id="logo-valorant">
+            <img src="../assets/logo_valo.png" alt="Valorant Logo">
+        </div>
+        <div class="logo-item" id="logo-rl">
+            <img src="../assets/logo_rl.png" alt="Rl Logo">
+        </div>
+    </div>
     
     <!-- Contenu principal -->
     <div class="live-page-container">
         <!-- Section League of Legends -->
-        <section class="live-section lol-section">
+        <section id="lol-section" class="live-section lol-section">
             <h2>League of Legends</h2>
             <div class="live-container">
                 <div class="stream-wrapper">
@@ -80,7 +101,7 @@
         </section>
 
         <!-- Section Valorant -->
-        <section class="live-section valo-section">
+        <section id="valo-section" class="live-section valo-section">
             <h2>VALORANT</h2>
             <div class="live-container">
                 <div class="stream-wrapper">
@@ -115,7 +136,7 @@
         </section>
 
         <!-- Section Rocket League -->
-        <section class="live-section rl-section">
+        <section id="rl-section" class="live-section rl-section">
             <h2>ROCKET LEAGUE</h2>
             <div class="live-container">
                 <div class="stream-wrapper">
@@ -150,33 +171,6 @@
         </section>
     </div>
 
-
-     <!-- Section Admin Sécurisée -->
-     <section class="admin-section">
-        <h2>Gestion des Matchs (Admin)</h2>
-        <form action="#" method="POST" class="admin-form">
-            <label for="teamA">Nom de l'Équipe A:</label>
-            <input type="text" id="teamA" name="teamA" required>
-
-            <label for="teamB">Nom de l'Équipe B:</label>
-            <input type="text" id="teamB" name="teamB" required>
-
-            <label for="twitchLink">Lien Twitch ou ID Twitch:</label>
-            <input type="text" id="twitchLink" name="twitchLink" required>
-
-            <label for="matchDate">Date et Heure du Match:</label>
-            <input type="datetime-local" id="matchDate" name="matchDate" required>
-
-            <label for="score">Score Final (si match terminé):</label>
-            <input type="text" id="score" name="score">
-
-            <button type="submit" class="btn-submit">Ajouter le match</button>
-            <button type="button" class="btn-submit" onclick="editMatch()">Modifier le match</button>
-            <button type="button" class="btn-submit" onclick="deleteMatch()">Supprimer le match</button>
-        </form>
-    </section>
-
-    
     <!-- Bouton retour en haut -->
     <a href="#" class="back-to-top">↑</a>
 
