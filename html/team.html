@@ -23,7 +23,6 @@
             <ul>
                 <li><a href="../index.html" aria-label="Page d'accueil">Accueil</a></li>
                 <li><a href="../html/tournoi.html" aria-label="Page du tournoi" class="active">Tournoi</a></li>
-                <li><a href="#" aria-label="Page d'inscription">Inscription</a></li>
                 <li><a href="../html/team.html" aria-label="Page des équipes">Équipes</a></li>
                 <li><a href="#" aria-label="Scores en direct">Scores en direct</a></li>
                 <li class="dropdown">
@@ -41,38 +40,111 @@
     </header>
 
     <div class="team-page-container">
-        <!-- Formulaire pour ajouter des poules et des équipes -->
-        <div class="add-pool-form">
-            <h2>Ajouter une Poule et des Équipes</h2>
-            <input type="text" id="pool-name" placeholder="Nom de la Poule" required>
-            <input type="text" id="team-name" placeholder="Nom de l'Équipe" required>
-            <button onclick="addPool()">Créer Poule</button>
-            <button onclick="addTeam()">Ajouter Équipe</button>
-        </div>
-
-        <!-- Sections des jeux -->
+        <!-- Section League of Legends -->
         <section class="team-section lol-section">
             <h2>League of Legends</h2>
-            <div class="pools-container" id="lol-pools">
-                <!-- Poules ajoutées dynamiquement -->
+            <div class="pools-container">
+                <div class="pool">
+                    <h3>Poule A</h3>
+                    <div class="team-list">
+                        <p>Équipe 1</p>
+                        <p>Équipe 2</p>
+                        <p>Équipe 3</p>
+                        <p>Équipe 4</p>
+                    </div>
+                    <div class="bracket"> 
+                        <!-- Bracket for Pool A -->
+                        <p>Arbre de Bracket (exemple)</p>
+                    </div>
+                </div>
+    
+                <!-- Repeat for other Pools -->
+                <div class="pool">
+                    <h3>Poule B</h3>
+                    <div class="team-list">
+                        <p>Équipe 5</p>
+                        <p>Équipe 6</p>
+                        <p>Équipe 7</p>
+                        <p>Équipe 8</p>
+                    </div>
+                    <div class="bracket">
+                        <!-- Bracket for Pool B -->
+                        <p>Arbre de Bracket (exemple)</p>
+                    </div>
+                </div>
             </div>
         </section>
-
+    
+        <!-- Section Valorant -->
         <section class="team-section valo-section">
             <h2>VALORANT</h2>
-            <div class="pools-container" id="valo-pools">
-                <!-- Poules ajoutées dynamiquement -->
+            <div class="pools-container">
+                <!-- Repeat structure for Valorant Pools -->
+                <div class="pool">
+                    <h3>Poule A</h3>
+                    <div class="team-list">
+                        <p>Équipe 1</p>
+                        <p>Équipe 2</p>
+                        <p>Équipe 3</p>
+                        <p>Équipe 4</p>
+                    </div>
+                    <div class="bracket">
+                        <!-- Bracket for Pool A -->
+                        <p>Arbre de Bracket (exemple)</p>
+                    </div>
+                </div>
+    
+                <div class="pool">
+                    <h3>Poule B</h3>
+                    <div class="team-list">
+                        <p>Équipe 5</p>
+                        <p>Équipe 6</p>
+                        <p>Équipe 7</p>
+                        <p>Équipe 8</p>
+                    </div>
+                    <div class="bracket">
+                        <!-- Bracket for Pool B -->
+                        <p>Arbre de Bracket (exemple)</p>
+                    </div>
+                </div>
             </div>
         </section>
-
+    
+        <!-- Section Rocket League -->
         <section class="team-section rl-section">
             <h2>ROCKET LEAGUE</h2>
-            <div class="pools-container" id="rl-pools">
-                <!-- Poules ajoutées dynamiquement -->
+            <div class="pools-container">
+                <!-- Repeat structure for Rocket League Pools -->
+                <div class="pool">
+                    <h3>Poule A</h3>
+                    <div class="team-list">
+                        <p>Équipe 1</p>
+                        <p>Équipe 2</p>
+                        <p>Équipe 3</p>
+                        <p>Équipe 4</p>
+                    </div>
+                    <div class="bracket">
+                        <!-- Bracket for Pool A -->
+                        <p>Arbre de Bracket (exemple)</p>
+                    </div>
+                </div>
+    
+                <div class="pool">
+                    <h3>Poule B</h3>
+                    <div class="team-list">
+                        <p>Équipe 5</p>
+                        <p>Équipe 6</p>
+                        <p>Équipe 7</p>
+                        <p>Équipe 8</p>
+                    </div>
+                    <div class="bracket">
+                        <!-- Bracket for Pool B -->
+                        <p>Arbre de Bracket (exemple)</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    
+    </body>
+    </html>
