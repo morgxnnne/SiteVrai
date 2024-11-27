@@ -141,6 +141,8 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-around;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 .pool {
@@ -177,6 +179,12 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-size: 1rem;
 }
 
+.footer {
+    margin-top: 1vh;
+    padding: 2vh 2vw;
+    text-align: center;
+    background-color: #121212;
+}
 
 /* Responsive CSS */
 /* Pour les écrans de taille inférieure à 768px (tablette) */
