@@ -248,10 +248,24 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     justify-content: center;
 }
 
+.valo-tournament-section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rl-tournament-section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 .lol-tournament-section h1 {
     font-family: 'Cinzel Decorative', cursive;
-    font-size: 5rem; /* Taille dynamique */
+    font-size: clamp(5rem, 8vw, 6rem); /* Plus grand pour les titres */
     color: #dda868;
     margin-bottom: 1rem;
     /* margin-left: 2vw; */
@@ -277,22 +291,69 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     padding: 1rem;
 }
 
+.spec-button
+{
+    background-color: #dda868;
+}
+
 
 /* Style des containers en fonction de leur position */
-.tournament-details-container:nth-child(1) {
-    border: 2px solid yellow;
-    background-color: rgba(255, 255, 0, 0.1);
+/* Style des containers en fonction de leur classe */
+.tournament-details-container .tournament-rules.red,
+.tournament-details-container .team-status.red,
+.tournament-details-container .team-status.red .separator.red,
+.tournament-details-container .separator.red {
+    border: 2px solid #c62c2c;
+    background-color: none
 }
 
-.tournament-details-container:nth-child(2) {
-    border: 2px solid red;
-    background-color: rgba(255, 0, 0, 0.1);
+.register-button.red,
+.spec-button.red
+{
+    background-color: #c62c2c;
 }
 
-.tournament-details-container:nth-child(3) {
-    border: 2px solid blue;
-    background-color: rgba(0, 0, 255, 0.1);
+.tournament-details-container .tournament-rules.blue,
+.tournament-details-container .team-status.blue,
+.tournament-details-container .team-status.blue .separator.blue,
+.tournament-details-container .separator.blue {
+    border: 2px solid #316ec9;
+    background-color: none
 }
+
+.register-button.blue,
+.spec-button.blue
+{
+    background-color: #316ec9;
+}
+
+.tournament-details-container .tournament-rules h4,
+.tournament-details-container .team-status h4 {
+    font-family: 'AudioWide';
+    font-size: 1.5rem;
+    color: #dda868;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.tournament-details-container .tournament-rules.red h4,
+.tournament-details-container .team-status.red h4 {
+    font-family: 'AudioWide';
+    font-size: 1.5rem;
+    color: #c62c2c;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.tournament-details-container .tournament-rules.blue h4,
+.tournament-details-container .team-status.blue h4 {
+    font-family: 'AudioWide';
+    font-size: 1.875rem;
+    color: #316ec9;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
 
 /* Style des règles et des statuts */
 .tournament-rules, .team-status {
@@ -308,23 +369,17 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     margin-bottom: 0.5rem;
 }
 
-/* Spécifique pour chaque couleur */
-.tournament-details-container:nth-child(1) .tournament-rules,
-.tournament-details-container:nth-child(1) .team-status {
-    border: 2px solid yellow;
-    color: yellow;
-}
 
-.tournament-details-container:nth-child(2) .tournament-rules,
-.tournament-details-container:nth-child(2) .team-status {
-    border: 2px solid red;
-    color: red;
+.lol-tournament-section h1 {
+    font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
 }
-
-.tournament-details-container:nth-child(3) .tournament-rules,
-.tournament-details-container:nth-child(3) .team-status {
-    border: 2px solid blue;
-    color: blue;
+.valo-tournament-section h1 {
+    color: #c62c2c;
+    font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+}
+.rl-tournament-section h1 {
+    color: #316ec9;
+    font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
 }
 
 
@@ -428,6 +483,18 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     transition: background-color 0.3s;
     align-self: center;
 }
+.spec-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-highlight-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    font-size: 1.875rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+    align-self: center;
+}
 
 .register-button:hover {
     background-color: #c47d27;
@@ -487,13 +554,31 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     align-self: center;
 }
 
+.valo-tournament-section h1 {
+    font-size: clamp(5rem, 8vw, 6rem); /* Plus grand pour les titres */
+}
+
+.rl-tournament-section h1 {
+    font-size: clamp(5rem, 8vw, 6rem); /* Plus grand pour les titres */
+}
+
+.footer {
+    margin-top: 1vh;
+    padding: 2vh 2vw;
+    text-align: center;
+    background-color: #121212;
+}
+
+
 @media (max-width: 768px) {
 
     .tournoi-intro h1 {
-        font-size: clamp(3rem, 3vw, 4rem); /* Texte adaptatif */
+        font-size: clamp(2.0rem, 3vw, 2.5rem); /* Texte adaptatif */
+        margin: 2%;
     }
     .tournoi-intro p {
-        font-size: clamp(1.2rem, 3vw, 1.8rem); /* Texte adaptatif */
+        font-size: clamp(1.4rem, 3vw, 2rem); /* Texte adaptatif */
+        margin: 2%;
     }
 
 }
@@ -518,6 +603,20 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
     .lol-tournament-section h1 {
         font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+    }
+    .valo-tournament-section h1 {
+        color: #c62c2c;
+        font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+    }
+    .rl-tournament-section h1 {
+        color: #316ec9;
+        font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+    }
+
+
+
+    tournament-details-container.blue .tournament-rules.blue {
+        font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
     }
 
     .lol-tournament-section p {
@@ -551,6 +650,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
         font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
     }
 
+
     .rl-tournament-section p {
         font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
         line-height: 1.6; /* Meilleure lisibilité */
@@ -579,7 +679,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     }
 
     .valo-tournament-section h1 {
-        font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+        font-size: clamp(rem, 8vw, 4.5rem); /* Plus grand pour les titres */
     }
 
     .valo-tournament-section p {
@@ -608,6 +708,14 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
         align-self: center;
     }
 
+    .spec-button {
+        width: 70%; /* Bouton moins large pour être esthétique */
+        font-size: clamp(0.8rem, 2.5vw, 1rem); /* Taille adaptative du texte du bouton */
+        margin-top: 2rem;
+        padding: 1rem; /* Padding interne ajusté */
+        align-self: center;
+    }
+
     .tournoi-details {
         width: 90%;
     }
@@ -626,6 +734,21 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
     .menu-logos {
         display: none;
+    }
+
+    .tournoi-main h2 {
+        font-size: clamp(1.5rem, 2vw, 1.8rem);
+    }
+    
+    .tournoi-main p {
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+
+    .tournoi-intro h1 {
+        margin: 2%;
+    }
+    .tournoi-intro p {
+        margin: 2%;
     }
 }
 

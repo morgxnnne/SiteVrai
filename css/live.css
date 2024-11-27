@@ -140,7 +140,6 @@ body {
 .logo-item {
     width: 6.25rem; /* 100px en rem */
     height: 6.25rem; /* 100px en rem */
-    background-color: #1e1e1e;
     border-radius: 1.25rem 0 0 1.25rem; /* 10px en rem */
     display: flex;
     justify-content: center;

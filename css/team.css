@@ -60,7 +60,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 .logo-item {
     width: 6.25rem; /* 100px en rem */
     height: 6.25rem; /* 100px en rem */
-    background-color: #1e1e1e;
     border-radius: 1.25rem 0 0 1.25rem; /* 10px en rem */
     display: flex;
     justify-content: center;
@@ -177,6 +176,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     color: #ffffff;
     font-size: 1rem;
 }
+
 
 /* Responsive CSS */
 /* Pour les écrans de taille inférieure à 768px (tablette) */
