@@ -6,15 +6,24 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-bg-color: #121212;
+    --text-color: #ffffff;
+    --highlight-color: #e94560;
+    --secondary-highlight-color: #dda868;
+    --dark-overlay: rgba(0, 0, 0, 0.4);
+}
+
 body {
     font-family: 'Audiowide', sans-serif;
-    color: #ffffff;
+    color: var(--text-color);
     background-color: #000000;
     line-height: 1.5;
-    font-size: 1rem; /* 16px équivaut à 1rem */
+    font-size: 1rem;
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-family: 'Audiowide', sans-serif;
@@ -51,11 +60,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-size: 1.25rem; /* 20px en rem */
     font-weight: bold;
     margin-left: 0.625rem; /* 10px en rem */
-}
-
-/* Menu burger */
-.menu-checkbox {
-    display: none; /* Cache la case à cocher */
 }
 
 .nav ul {
@@ -313,7 +317,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
 /* Section League of Legends */
 .lol-tournament-section {
-    /* position: relative; */
     background-image: url('../assets/fond_lol.png'); /* Image de fond */
     background-size: cover; /* Couvre toute la section sans couper l'image */
     background-position: center center; /* Centrer l'image */
@@ -323,13 +326,13 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-family: 'Cinzel Decorative';
     box-shadow: 0 0.25rem 1rem rgba(123, 92, 34, 0.51); /* Ombre douce */
     border-radius: 0.625rem;
-    width: 105rem; /* Largeur relative */
+    width: 105rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* width: auto; */
     justify-content: center;
 }
+
 
 .lol-tournament-section h1 {
     font-family: 'Cinzel Decorative', cursive;
@@ -418,7 +421,7 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
 .separator {
     border: none;
-    border-top: 0.125rem solid #dda868;
+    border-top: 0.125rem solid var(--secondary-highlight-color);
     margin: 1.25rem 0;
     width: 100%;
 }
@@ -427,15 +430,14 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 .register-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #dda868;
-    color: #fff;
+    background-color: var(--secondary-highlight-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 0.3125rem;
     font-size: 1.875rem;
     margin-top: 6.25rem;
-    margin-left: 2vw;
     transition: background-color 0.3s;
-    width: fit-content;
+    align-self: center;
 }
 
 .register-button:hover {
@@ -459,114 +461,8 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     /* min-width: 95vw; */
     /* width: 90%; */
     margin: 0 auto;
+    C: \Users\gunsa\Desktop\Git-Repo\Sitemorga\SiteVrai\html;
     width: 105rem;
-}
-
-.valo-tournament-section h1 {
-    font-family: 'Audiowide';
-    font-size: 5rem;
-    color: #c62c2c;
-    margin-bottom: 1rem;
-    margin-left: 2vw;
-}
-
-/* Overlay sombre */
-.valo-tournament-section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-}
-
-/* Détails Tournoi et Équipes */
-.valo-tournament-details-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    z-index: 1;
-}
-
-/* Case Tournoi */
-.valo-tournament-rules {
-    flex: 1;
-    padding: 1.25rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.625rem;
-    text-align: center;
-    border: 2px solid #c62c2c;
-    max-width: 31.25rem;
-    margin-left: 2vw;
-}
-
-.valo-tournament-rules p {
-    font-family: 'AudioWide';
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin-bottom: 1.25rem;
-    margin-left: 0.625rem;
-    text-align: left;
-    line-height: 1.5;
-}
-
-/* Case Équipes */
-.valo-team-status {
-    /* flex: 1; */
-    padding: 1.25rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.625rem;
-    text-align: center;
-    border: 2px solid #c62c2c;
-    /* max-width: 31.25rem; */
-    /* max-height: 50vh; */
-    /* margin-top: -15vh; */
-    /* margin-right: 2vw; */
-}
-
-/* Titres des cases */
-.valo-tournament-rules h4, .valo-team-status h4 {
-    font-family: 'AudioWide';
-    font-size: 1.875rem;
-    color: #c62c2c;
-    margin-bottom: 1.25rem;
-    /* margin-left: 2vw; */
-    text-align: center;
-}
-
-/* Description des sections */
-.valo-tournament-section .description, 
-.valo-tournament-section .details {
-    font-size: 1.563rem;
-    margin: 1.875rem;
-    color: #ffffff;
-    max-width: 50rem;
-}
-
-.valo-separator {
-    border: none;
-    border-top: 0.125rem solid #c62c2c;
-    margin: 1.25rem 0;
-    width: 100%;
-}
-
-/* Bouton d'inscription */
-.valo-register-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #c62c2c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0.3125rem;
-    font-size: 1.875rem;
-    margin-top: 6.25rem;
-    margin-left: 2vw;
-    transition: background-color 0.3s;
-}
-
-.valo-register-button:hover {
-    background-color: #831818;
 }
 
 /* Répéter pour Rocket League */
@@ -588,114 +484,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     margin: 0 auto;
 }
 
-.rl-tournament-section h1 {
-    font-family: 'Audiowide';
-    font-size: 5rem;
-    color: #316ec9;
-    margin-bottom: 1rem;
-    margin-left: 2vw;
-}
-
-/* Overlay sombre */
-.rl-tournament-section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-}
-
-/* Détails Tournoi et Équipes */
-.rl-tournament-details-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    z-index: 1;
-}
-
-/* Case Tournoi */
-.rl-tournament-rules {
-    flex: 1;
-    padding: 1.25rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.625rem;
-    text-align: center;
-    border: 2px solid #316ec9;
-    max-width: 31.25rem;
-    margin-left: 2vw;
-}
-
-.rl-tournament-rules p {
-    font-family: 'AudioWide';
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin-bottom: 1.25rem;
-    margin-left: 0.625rem;
-    text-align: left;
-    line-height: 1.5;
-}
-
-/* Case Équipes */
-.rl-team-status {
-    /* flex: 1; */
-    padding: 1.25rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.625rem;
-    text-align: center;
-    border: 2px solid #316ec9;
-    /* max-width: 31.25rem; */
-    /* max-height: 50vh; */
-    /* margin-top: -15vh; */
-    /* margin-right: 2vw; */
-}
-
-/* Titres des cases */
-.rl-tournament-rules h4, .rl-team-status h4 {
-    font-family: 'AudioWide';
-    font-size: 1.875rem;
-    color: #316ec9;
-    margin-bottom: 1.25rem;
-    /* margin-left: 2vw; */
-    text-align: center;
-}
-
-/* Description des sections */
-.rl-tournament-section .description, 
-.rl-tournament-section .details {
-    font-size: 1.563rem;
-    margin: 1.875rem;
-    color: #ffffff;
-    max-width: 50rem;
-}
-
-.rl-separator {
-    border: none;
-    border-top: 0.125rem solid #316ec9;
-    margin: 1.25rem 0;
-    width: 100%;
-}
-
-/* Bouton d'inscription */
-.rl-register-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #316ec9;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0.3125rem;
-    font-size: 1.875rem;
-    margin-top: 6.25rem;
-    margin-left: 2vw;
-    transition: background-color 0.3s;
-}
-
-.rl-register-button:hover {
-    background-color: #133d7a;
-}
-
-
 .separator-section {
     /* width: 80%; */
     height: 5px;
@@ -706,9 +494,140 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     margin-top: 3rem;
     /* margin-left: 6em; */
     /* margin-right: 6em; */
-    width: 100em;
+    width: 80%;
     align-self: center;
 }
+
+@media (max-width: 1024px) {
+    .lol-tournament-section {
+        width: 90%; /* Réduit la largeur pour laisser un padding sur les côtés */
+        margin: 0 auto; /* Centre horizontalement */
+        padding: 2rem 1rem; /* Ajoute un padding interne */
+        min-height: 98vh; /* Prend presque toute la hauteur visible */
+        text-align: center; /* Texte centré */
+        flex-direction: column; /* Dispose les éléments en colonne */
+        background-size: cover; /* Maintient la couverture */
+        background-position: center;
+    }
+
+    .lol-tournament-section .description, 
+    .lol-tournament-section .details {
+        font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
+        margin: 0.2rem;
+    }
+
+    .lol-tournament-section h1 {
+        font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+    }
+
+    .lol-tournament-section p {
+        font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
+        line-height: 1.6; /* Meilleure lisibilité */
+        margin: 0.2rem 0;
+    }
+
+    .lol-tournament-section .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Couche sombre légèrement renforcée */
+    }
+
+    .rl-tournament-section {
+        width: 90%; /* Réduit la largeur pour laisser un padding sur les côtés */
+        margin: 0 auto; /* Centre horizontalement */
+        padding: 2rem 1rem; /* Ajoute un padding interne */
+        min-height: 98vh; /* Prend presque toute la hauteur visible */
+        text-align: center; /* Texte centré */
+        flex-direction: column; /* Dispose les éléments en colonne */
+        background-size: cover; /* Maintient la couverture */
+        background-position: center;
+    }
+
+    .rl-tournament-section .description, 
+    .rl-tournament-section .details {
+        font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
+        margin: 0.2rem;
+    }
+
+    .rl-tournament-section h1 {
+        font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+    }
+
+    .rl-tournament-section p {
+        font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
+        line-height: 1.6; /* Meilleure lisibilité */
+        margin: 0.2rem 0;
+    }
+
+    .rl-tournament-section .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Couche sombre légèrement renforcée */
+    }
+
+    .valo-tournament-section {
+        width: 90%; /* Réduit la largeur pour laisser un padding sur les côtés */
+        margin: 0 auto; /* Centre horizontalement */
+        padding: 2rem 1rem; /* Ajoute un padding interne */
+        min-height: 98vh; /* Prend presque toute la hauteur visible */
+        text-align: center; /* Texte centré */
+        flex-direction: column; /* Dispose les éléments en colonne */
+        background-size: cover; /* Maintient la couverture */
+        background-position: center;
+    }
+
+    .valo-tournament-section .description, 
+    .valo-tournament-section .details {
+        font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
+        margin: 0.2rem;
+    }
+
+    .valo-tournament-section h1 {
+        font-size: clamp(3rem, 8vw, 4.5rem); /* Plus grand pour les titres */
+    }
+
+    .valo-tournament-section p {
+        font-size: clamp(0.9rem, 3vw, 1.4rem); /* Texte adaptatif */
+        line-height: 1.6; /* Meilleure lisibilité */
+        margin: 0.2rem 0;
+    }
+
+    .valo-tournament-section .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* Couche sombre légèrement renforcée */
+    }
+
+    .tournament-details-container {
+        display: flex;
+        flex-direction: column; /* Place les cases en colonne */
+        align-items: center;
+        gap: 1rem; /* Espacement entre les éléments */
+    }
+
+    .tournament-rules, .team-status {
+        width: 85%; /* Réduit la largeur des cases */
+        margin: 0 auto; /* Centré horizontalement */
+        padding: 1.5rem; /* Augmente le padding interne */
+        text-align: left; /* Texte aligné à gauche */
+        font-size: clamp(0.9rem, 2vw, 1.2rem); /* Texte adaptatif dans les cases */
+    }
+
+    .register-button {
+        width: 70%; /* Bouton moins large pour être esthétique */
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Taille adaptative du texte du bouton */
+        margin-top: 2rem;
+        padding: 1rem; /* Padding interne ajusté */
+        align-self: center;
+    }
+
+    .team-status {
+        font-family : 'Rajdhani';
+    }
+
+    .tournament-rules h3 {
+        font-size: clamp(1.3rem, 2vw, 1.5rem);
+    }
+
+    .separator {
+        margin : 0.75rem 0;
+    }
+}
+
 
 /* Footer */
 .footer {
@@ -716,19 +635,3 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     text-align: center;
     background-color: #121212;
 }
-
-/* Responsive CSS */
-/* Pour les écrans de taille inférieure à 768px (tablette) */
-@media (max-width: 800px) {
-    .menu-logos {
-        display: none; /* Cache les logos fixes à droite pour ne pas encombrer l'écran */
-    }
-}
-   
-@media (max-width: 400px) {
-    .menu-logos {
-        display: none; /* Cache les logos fixes à droite pour ne pas encombrer l'écran */
-    }
-}
-
-

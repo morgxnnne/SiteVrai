@@ -504,19 +504,8 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     }
 
     .hero-text h1 {
-        font-size: clamp(2rem, 5vw, 4rem);
-        width: 90%; /* Plus de largeur pour le texte */
-        margin-left: 5%;
-    }
-
-    .hero-text .buttons {
-        flex-direction: column; /* Boutons empilés */
-        gap: 1vh;
-    }
-
-    .trapezoid {
-        width: 50%;
-        height: 6vh;
+        font-size: 4vh;
+        margin-bottom: 1vh;
     }
 
     .buttons {
@@ -609,59 +598,9 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
         display: block;
     }
 
-    /* Cacher la navigation classique sur mobile */
-    .nav ul {
-        display: flex;
-    }
-
-    .hero-text h1 {
-        font-size: clamp(3rem, 6vw, 5rem);
-        width: 80%;
-    }
-
-    .game-posters {
-        justify-content: space-between;
-        gap: calc(2vh + 10px);
-    }
-
-    .poster {
-        width: calc(50% - 2vw);
-    }
-
-    .poster .game-description {
-        font-size: min(0.8rem, 3vw);
-    }
-}
-
-/* PC portables */
-@media (min-width: 800px) and (max-width: 1024px) {
-    .game-posters {
-        justify-content: space-between;
-        gap: calc(2vh + 10px);
-    }
-
-    .poster {
-        width: calc(33.33% - 2vw);
-    }
-
-    .poster .game-description {
-        font-size: min(0.7rem, 2.5vw);
-    }
-}
-
-/* PC fixes */
-@media (min-width: 1025px) {
-    .game-posters {
-        justify-content: space-between;
-        gap: calc(1vw); /* Réduction de l'espacement entre les posters */
-    }
-
-    .poster {
-        width: calc(30% - 1vw); /* Réduction légère pour inclure plus d'espace disponible */
-    }
-
-    .poster .game-description {
-        font-size: min(1rem, 3vw);
+    .footer .icons {
+        flex-direction: column;
+        gap: 1vh;
     }
 }
 
