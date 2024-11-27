@@ -11,29 +11,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css"> 
     <link rel="stylesheet" href="../css/tournoi.css"> 
+    <link rel="stylesheet" href="../css/nav.css">
 </head>
     <body>
         <!-- En-tête -->
         <header class="header">
+            <!-- Logo -->
             <div class="logo">
-                <img src="../assets/upec_logo.png" alt="Logo UPEC" loading="lazy">
+                <img src="./../assets/upec_logo.png" alt="Logo UPEC" loading="lazy">
                 <span>ESPORT</span>
             </div>
+        
+            <!-- Menu Burger -->
+            <input type="checkbox" id="check" class="menu-checkbox" aria-label="Menu burger" />
+            <label for="check" class="open-menu">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label for="check" class="close-menu">
+                <i class="fas fa-times"></i>
+            </label>
+        
+            <!-- Navigation -->
             <nav class="nav">
                 <ul>
-                    <li><a href="../index.html" aria-label="Page d'accueil">Accueil</a></li>
-                    <li><a href="../html/tournoi.html" aria-label="Page du tournoi" class="active">Tournoi</a></li>
-                    <li><a href="#" aria-label="Page d'inscription">Inscription</a></li>
-                    <li><a href="../html/team.html" aria-label="Page des équipes">Équipes</a></li>
-                    <li><a href="#" aria-label="Scores en direct">Scores en direct</a></li>
+                    <li><a href="./../index.html" aria-label="Page d'accueil">Accueil</a></li>
+                    <li><a href="./tournoi.html" aria-label="Page du tournoi" class="active">Tournoi</a></li>
+                    <li><a href="./team.html" aria-label="Page des équipes">Équipes</a></li>
+                    <li><a href="./live.html" aria-label="Scores en direct">Scores en direct</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Contact</a>
                         <div class="dropdown-content">
-                        <p><strong>Email:</strong> contact@votre-email.com</p>
-                        <p><strong>Twitch:</strong> <a href="https://www.twitch.tv/votre_twitch" target="_blank">Notre Twitch</a></p>
-                        <p><strong>Discord:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Rejoignez notre serveur</a></p>
-                        <p><strong>Instagram:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Notre Instagram</a></p>
-                        <p><strong>Tiktok:</strong> <a href="https://discord.com/invite/votre_discord" target="_blank">Notre compte Tiktok</a></p>
+                            <p><strong>Email:</strong> contact@votre-email.com</p>
+                            <p><strong>Twitch:</strong> <a href="https://www.twitch.tv/votre_twitch" target="_blank">Notre Twitch</a></p>
+                            <p><strong>Discord:</strong> <a href="https://discord.gg/92ct7Z5H" target="_blank">Rejoignez notre serveur</a></p>
+                            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/as_upec?igsh=MWd2YTAzb3R4N2Zmbg==" target="_blank">Notre Instagram</a></p>
+                            <p><strong>Tiktok:</strong> <a href="https://www.tiktok.com/@esport.upec.asso?_t=8rkTAaSugvW&_r=1" target="_blank">Notre compte Tiktok</a></p>
                         </div>
                     </li>
                 </ul>
@@ -91,7 +103,7 @@
                 <div class="tournament-details-container">
                     <!-- Case Tournoi -->
                     <div class="tournament-rules">
-                        <h3>Tournoi :</h3>
+                        <h4>Tournoi :</h4>
                         <hr class="separator">
                         <p><i class="fas fa-sync-alt"></i> <strong> Tournoi en poules : </strong> Affrontez vos adversaires dans des matchs de poules et placez-vous parmi les meilleures équipes pour accéder aux finales !</p>
                         <p><i class="fas fa-users"></i> <strong> 5vs5 : </strong> Formez des équipes de 5 !</p>

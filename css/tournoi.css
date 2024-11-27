@@ -29,90 +29,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     font-family: 'Audiowide', sans-serif;
 }
 
-/* Styles pour l'en-tête */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem; /* 20px en rem */
-    background-color: #121212;
-}
-
-.div_main{
-    display: flex;
-    flex-direction: column;
-}
-
-.header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.625rem; /* 10px en rem */
-}
-
-.logo img {
-    height: 3.125rem; /* 50px en rem */
-    width: auto;
-    max-width: 100%;
-}
-
-.logo span {
-    font-size: 1.25rem; /* 20px en rem */
-    font-weight: bold;
-    margin-left: 0.625rem; /* 10px en rem */
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.875rem; /* 30px en rem */
-}
-
-.nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav a:hover {
-    color: #e94560;
-}
-
-  /* Style du menu déroulant (par défaut caché) */
-  .dropdown-content {
-    display: none;
-    position : absolute;
-    right: 0;
-    background-color: #333;
-    min-width: 200px;
-    z-index: 1;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-  }
-  
-  .dropdown-content p {
-    margin: 5px 0;
-    color: #fff;
-  }
-  
-  .dropdown-content a {
-    color: #e94560; 
-    text-decoration: none;
-  }
-  
-  .dropdown-content a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Afficher le menu au survol du "Contact" */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropbtn:hover {
-    background-color: #444;
-  }
   
 .back-to-top {
     position: fixed;
@@ -180,7 +96,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 .logo-item {
     width: 6.25rem; /* 100px en rem */
     height: 6.25rem; /* 100px en rem */
-    background-color: #1e1e1e;
     border-radius: 1.25rem 0 0 1.25rem; /* 10px en rem */
     display: flex;
     justify-content: center;
@@ -356,10 +271,62 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 /* Conteneur pour les détails Tournoi et Équipes */
 .tournament-details-container {
     display: flex;
-    justify-content: space-between;
-    gap: 2rem; /* Espacement dynamique */
-    /* z-index: 1; */
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
 }
+
+
+/* Style des containers en fonction de leur position */
+.tournament-details-container:nth-child(1) {
+    border: 2px solid yellow;
+    background-color: rgba(255, 255, 0, 0.1);
+}
+
+.tournament-details-container:nth-child(2) {
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.tournament-details-container:nth-child(3) {
+    border: 2px solid blue;
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+/* Style des règles et des statuts */
+.tournament-rules, .team-status {
+    flex: 1 1 45%;
+    max-width: 400px;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.tournament-rules h3, .team-status h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Spécifique pour chaque couleur */
+.tournament-details-container:nth-child(1) .tournament-rules,
+.tournament-details-container:nth-child(1) .team-status {
+    border: 2px solid yellow;
+    color: yellow;
+}
+
+.tournament-details-container:nth-child(2) .tournament-rules,
+.tournament-details-container:nth-child(2) .team-status {
+    border: 2px solid red;
+    color: red;
+}
+
+.tournament-details-container:nth-child(3) .tournament-rules,
+.tournament-details-container:nth-child(3) .team-status {
+    border: 2px solid blue;
+    color: blue;
+}
+
 
 /* Case Tournoi */
 .tournament-rules {
@@ -411,6 +378,28 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 /* Description des sections */
 .lol-tournament-section .description, 
 .lol-tournament-section .details {
+    font-size: 1.563rem;
+    margin: 1.875rem;
+    color: #ffffff;
+    max-width: 50rem;
+    /* overflow: hidden; */
+    /* text-overflow: clip; */
+}
+
+/* Description des sections */
+.valo-tournament-section .description, 
+.valo-tournament-section .details {
+    font-size: 1.563rem;
+    margin: 1.875rem;
+    color: #ffffff;
+    max-width: 50rem;
+    /* overflow: hidden; */
+    /* text-overflow: clip; */
+}
+
+/* Description des sections */
+.rl-tournament-section .description, 
+.rl-tournament-section .details {
     font-size: 1.563rem;
     margin: 1.875rem;
     color: #ffffff;
@@ -496,6 +485,17 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
     /* margin-right: 6em; */
     width: 80%;
     align-self: center;
+}
+
+@media (max-width: 768px) {
+
+    .tournoi-intro h1 {
+        font-size: clamp(3rem, 3vw, 4rem); /* Texte adaptatif */
+    }
+    .tournoi-intro p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem); /* Texte adaptatif */
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -592,13 +592,6 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
         background-color: rgba(0, 0, 0, 0.5); /* Couche sombre légèrement renforcée */
     }
 
-    .tournament-details-container {
-        display: flex;
-        flex-direction: column; /* Place les cases en colonne */
-        align-items: center;
-        gap: 1rem; /* Espacement entre les éléments */
-    }
-
     .tournament-rules, .team-status {
         width: 85%; /* Réduit la largeur des cases */
         margin: 0 auto; /* Centré horizontalement */
@@ -615,6 +608,10 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
         align-self: center;
     }
 
+    .tournoi-details {
+        width: 90%;
+    }
+
     .team-status {
         font-family : 'Rajdhani';
     }
@@ -625,6 +622,10 @@ h1, h2, h3, p, a, .btn, .header, .nav, .tournoi-section, .footer {
 
     .separator {
         margin : 0.75rem 0;
+    }
+
+    .menu-logos {
+        display: none;
     }
 }
 
